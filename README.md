@@ -90,16 +90,15 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ##### Functions:
 
-1. [`NewLRU`](./cache/lru.go#L22): NewLRU represent initiate lru cache with capacity
-2. [`NewLFU`](./cache/lfu.go#L33): NewLFU represent initiate lfu cache with capacity
-3. [`Get`](./cache/lfu.go#L52): Get the value by key from LFU cache
-4. [`Put`](./cache/lfu.go#L66): Put the key and value in LFU cache
+1. [`NewLFU`](./cache/lfu.go#L33):  NewLFU init the LFU cache with capacity
+2. [`NewLRU`](./cache/lru.go#L23):  NewLRU represent initiate lru cache with capacity
 
 ---
 ##### Types
 
-1. [`LRU`](./cache/lru.go#L15): Default the struct of lru cache algorithm.
-2. [`LFU`](./cache/lfu.go#L19): Default the struct of lfu cache algorithm.
+1. [`LFU`](./cache/lfu.go#L19): No description provided.
+
+2. [`LRU`](./cache/lru.go#L15): No description provided.
 
 
 ---
@@ -346,6 +345,25 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 </details><details>
+	<summary> <strong> fenwicktree </strong> </summary>	
+
+---
+
+#####  Fenwick Tree Data Structure for efficient range queries on an array of integers. Also known as Binary Indexed Tree. It can query the sum of any range of the array and can update the array at a specific position by adding a value to it (point update). Build: O(N) Query: O(log(N)) Update: O(log(N)) reference: https://brilliant.org/wiki/fenwick-tree/
+
+---
+##### Functions:
+
+1. [`NewFenwickTree`](./structure/fenwicktree/fenwicktree.go#L20):  NewFenwickTree creates a new Fenwick tree, initializes bit with the values of the array. Note that the queries and updates should have one based indexing.
+
+---
+##### Types
+
+1. [`FenwickTree`](./structure/fenwicktree/fenwicktree.go#L11): No description provided.
+
+
+---
+</details><details>
 	<summary> <strong> fibonacci </strong> </summary>	
 
 ---
@@ -455,13 +473,12 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 5. [`FloydWarshall`](./graph/floydwarshall.go#L15):  FloydWarshall Returns all pair's shortest path using Floyd Warshall algorithm
 6. [`GetIdx`](./graph/depthfirstsearch.go#L3): No description provided.
 7. [`KruskalMST`](./graph/kruskal.go#L23): No description provided.
-8. [`PrimMST`](./graph/prim.go#30): Computes the minimum spanning tree of a weighted undirected graph
-9. [`LowestCommonAncestor`](./graph/lowestcommonancestor.go#L111):  For each node, we will precompute its ancestor above him, its ancestor two nodes above, its ancestor four nodes above, etc. Let's call `jump[j][u]` is the `2^j`-th ancestor above the node `u` with `u` in range `[0, numbersVertex)`, `j` in range `[0,MAXLOG)`. These information allow us to jump from any node to any ancestor above it in `O(MAXLOG)` time.
-10. [`New`](./graph/graph.go#L16):  Constructor functions for graphs (undirected by default)
-11. [`NewTree`](./graph/lowestcommonancestor.go#L84): No description provided.
-12. [`NewUnionFind`](./graph/unionfind.go#L24):  Initialise a new union find data structure with s nodes
-13. [`NotExist`](./graph/depthfirstsearch.go#L12): No description provided.
-14. [`Topological`](./graph/topological.go#L7):  Topological assumes that graph given is valid and that its possible to get a topological ordering. constraints are array of []int{a, b}, representing an edge going from a to b
+8. [`LowestCommonAncestor`](./graph/lowestcommonancestor.go#L111):  For each node, we will precompute its ancestor above him, its ancestor two nodes above, its ancestor four nodes above, etc. Let's call `jump[j][u]` is the `2^j`-th ancestor above the node `u` with `u` in range `[0, numbersVertex)`, `j` in range `[0,MAXLOG)`. These information allow us to jump from any node to any ancestor above it in `O(MAXLOG)` time.
+9. [`New`](./graph/graph.go#L16):  Constructor functions for graphs (undirected by default)
+10. [`NewTree`](./graph/lowestcommonancestor.go#L84): No description provided.
+11. [`NewUnionFind`](./graph/unionfind.go#L24):  Initialise a new union find data structure with s nodes
+12. [`NotExist`](./graph/depthfirstsearch.go#L12): No description provided.
+13. [`Topological`](./graph/topological.go#L7):  Topological assumes that graph given is valid and that its possible to get a topological ordering. constraints are array of []int{a, b}, representing an edge going from a to b
 
 ---
 ##### Types
@@ -482,6 +499,10 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 8. [`WeightedGraph`](./graph/floydwarshall.go#L9): No description provided.
 
+9. [`minEdge`](#L0): 
+
+	Methods:
+	1. [`Len`](./graph/prim.go#L14): No description provided.
 
 ---
 </details><details>
@@ -640,7 +661,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 
-#####  Package math is a package that contains mathematical algorithms and its different implementations. filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go
+#####  filename : krishnamurthy.go description: A program which contains the function that returns true if a given number is Krishnamurthy number or not. details: A number is a Krishnamurthy number if the sum of all the factorials of the digits is equal to the number. Ex: 1! = 1, 145 = 1! + 4! + 5! author(s): [GooMonk](https://github.com/GooMonk) see krishnamurthy_test.go Package math is a package that contains mathematical algorithms and its different implementations.
 
 ---
 ##### Functions:
@@ -989,9 +1010,12 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 
+#####  Segment Tree Data Structure for efficient range queries on an array of integers. It can query the sum and update the elements to a new value of any range of the array. Build: O(n*log(n)) Query: O(log(n)) Update: O(log(n)) reference: https://cp-algorithms.com/data_structures/segment_tree.html
+
+---
 ##### Functions:
 
-1. [`NewSegmentTree`](./structure/segmenttree/segmenttree.go#L116): No description provided.
+1. [`NewSegmentTree`](./structure/segmenttree/segmenttree.go#L117):  NewSegmentTree returns a new instance of a SegmentTree. It takes an input array of integers representing Array, initializes and builds the SegmentTree.
 
 ---
 ##### Types
@@ -1058,6 +1082,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 23. [`Selection`](./sort/selectionsort.go#L5): No description provided.
 24. [`Shell`](./sort/shellsort.go#L5): No description provided.
 25. [`Simple`](./sort/simplesort.go#L13): No description provided.
+26. [`Timsort`](./sort/timsort.go#L13):  Timsort is a simple generic implementation of Timsort algorithm.
 
 ---
 ##### Types
@@ -1145,8 +1170,10 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 ##### Functions:
 
 1. [`NewAVL`](./structure/tree/avl.go#L54):  NewAVL creates a novel AVL tree
-2. [`NewBinarySearch`](./structure/tree/bstree.go#L46):  NewBinarySearch creates a novel Binary-Search tree
-3. [`NewRB`](./structure/tree/rbtree.go#L57):  NewRB creates a new Red-Black Tree
+2. [`NewBTree`](./structure/tree/btree.go#L35): No description provided.
+3. [`NewBTreeNode`](./structure/tree/btree.go#L24): No description provided.
+4. [`NewBinarySearch`](./structure/tree/bstree.go#L46):  NewBinarySearch creates a novel Binary-Search tree
+5. [`NewRB`](./structure/tree/rbtree.go#L57):  NewRB creates a new Red-Black Tree
 
 ---
 ##### Types
@@ -1157,11 +1184,15 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 3. [`BSNode`](./structure/tree/bstree.go#L15): No description provided.
 
-4. [`BinarySearch`](./structure/tree/bstree.go#L40): No description provided.
+4. [`BTree`](./structure/tree/btree.go#L15): No description provided.
 
-5. [`RB`](./structure/tree/rbtree.go#L51): No description provided.
+5. [`BTreeNode`](./structure/tree/btree.go#L8): No description provided.
 
-6. [`RBNode`](./structure/tree/rbtree.go#L25): No description provided.
+6. [`BinarySearch`](./structure/tree/bstree.go#L40): No description provided.
+
+7. [`RB`](./structure/tree/rbtree.go#L51): No description provided.
+
+8. [`RBNode`](./structure/tree/rbtree.go#L25): No description provided.
 
 
 ---
