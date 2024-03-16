@@ -1,6 +1,7 @@
 # The Algorithms - Go
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod&style=flat-square)](https://gitpod.io/#https://github.com/TheAlgorithms/Go)&nbsp;
 [![Continuous Integration](https://github.com/TheAlgorithms/Go/actions/workflows/ci.yml/badge.svg)](https://github.com/TheAlgorithms/Go/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/TheAlgorithms/Go/graph/badge.svg?token=aSWh7N8tNx)](https://codecov.io/gh/TheAlgorithms/Go)
 ![godocmd](https://github.com/tjgurwara99/Go/workflows/godocmd/badge.svg)
 ![](https://img.shields.io/github/repo-size/TheAlgorithms/Go.svg?label=Repo%20size&style=flat-square)&nbsp;
 ![update_directory_md](https://github.com/TheAlgorithms/Go/workflows/update_directory_md/badge.svg)
@@ -454,12 +455,13 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 5. [`FloydWarshall`](./graph/floydwarshall.go#L15):  FloydWarshall Returns all pair's shortest path using Floyd Warshall algorithm
 6. [`GetIdx`](./graph/depthfirstsearch.go#L3): No description provided.
 7. [`KruskalMST`](./graph/kruskal.go#L23): No description provided.
-8. [`LowestCommonAncestor`](./graph/lowestcommonancestor.go#L111):  For each node, we will precompute its ancestor above him, its ancestor two nodes above, its ancestor four nodes above, etc. Let's call `jump[j][u]` is the `2^j`-th ancestor above the node `u` with `u` in range `[0, numbersVertex)`, `j` in range `[0,MAXLOG)`. These information allow us to jump from any node to any ancestor above it in `O(MAXLOG)` time.
-9. [`New`](./graph/graph.go#L16):  Constructor functions for graphs (undirected by default)
-10. [`NewTree`](./graph/lowestcommonancestor.go#L84): No description provided.
-11. [`NewUnionFind`](./graph/unionfind.go#L24):  Initialise a new union find data structure with s nodes
-12. [`NotExist`](./graph/depthfirstsearch.go#L12): No description provided.
-13. [`Topological`](./graph/topological.go#L7):  Topological assumes that graph given is valid and that its possible to get a topological ordering. constraints are array of []int{a, b}, representing an edge going from a to b
+8. [`PrimMST`](./graph/prim.go#30): Computes the minimum spanning tree of a weighted undirected graph
+9. [`LowestCommonAncestor`](./graph/lowestcommonancestor.go#L111):  For each node, we will precompute its ancestor above him, its ancestor two nodes above, its ancestor four nodes above, etc. Let's call `jump[j][u]` is the `2^j`-th ancestor above the node `u` with `u` in range `[0, numbersVertex)`, `j` in range `[0,MAXLOG)`. These information allow us to jump from any node to any ancestor above it in `O(MAXLOG)` time.
+10. [`New`](./graph/graph.go#L16):  Constructor functions for graphs (undirected by default)
+11. [`NewTree`](./graph/lowestcommonancestor.go#L84): No description provided.
+12. [`NewUnionFind`](./graph/unionfind.go#L24):  Initialise a new union find data structure with s nodes
+13. [`NotExist`](./graph/depthfirstsearch.go#L12): No description provided.
+14. [`Topological`](./graph/topological.go#L7):  Topological assumes that graph given is valid and that its possible to get a topological ordering. constraints are array of []int{a, b}, representing an edge going from a to b
 
 ---
 ##### Types
